@@ -1,0 +1,144 @@
+@font-face {
+  font-family: Arial;
+  font-display: swap;
+  src: url("../fonts/Arial-regular.woff2") format("woff2"), url("../fonts/Arial-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: circe;
+  font-display: swap;
+  src: url("../fonts/circe-bold.woff2") format("woff2"), url("../fonts/circe-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: circe;
+  font-display: swap;
+  src: url("../fonts/circe-bold.woff2") format("woff2"), url("../fonts/circe-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Arial;
+  font-display: swap;
+  src: url("../fonts/Arial-regular.woff2") format("woff2"), url("../fonts/Arial-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: circe;
+  font-display: swap;
+  src: url("../fonts/circe-medium.woff2") format("woff2"), url("../fonts/circe-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: circe;
+  font-display: swap;
+  src: url("../fonts/circe-light.woff2") format("woff2"), url("../fonts/circe-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: circe;
+  font-display: swap;
+  src: url("../fonts/circe-medium.woff2") format("woff2"), url("../fonts/circe-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: circe;
+  font-display: swap;
+  src: url("../fonts/circe-light.woff2") format("woff2"), url("../fonts/circe-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: circe;
+  font-display: swap;
+  src: url("../fonts/circe-regular.woff2") format("woff2"), url("../fonts/circe-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: georgia;
+  font-display: swap;
+  src: url("../fonts/georgia-regularItalic.woff2") format("woff2"), url("../fonts/georgia-regularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: georgia;
+  font-display: swap;
+  src: url("../fonts/georgia-regularItalic.woff2") format("woff2"), url("../fonts/georgia-regularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: circe;
+  font-display: swap;
+  src: url("../fonts/circe-regular.woff2") format("woff2"), url("../fonts/circe-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+/*# sourceMappingURL=fonts.css.map */
