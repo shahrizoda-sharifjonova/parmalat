@@ -481,15 +481,29 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer__col.first {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer__col.last {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.footer__col.notjcsb {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+.footer__col-wrapper {
+  width: 144px;
+}
+
+.footer__col-wrapper.list__mb {
+  margin-bottom: 27px;
 }
 
 .footer__p {
@@ -541,8 +555,19 @@
   color: #213564;
 }
 
+.footer__medias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .footer__media {
   margin-bottom: 17px;
+  display: block;
+}
+
+.footer__media:first-of-type {
+  margin-right: 20px;
 }
 
 .footer__download {
@@ -672,7 +697,28 @@
       -ms-flex-align: center;
           align-items: center;
   background: #213564;
+  border: 2px solid transparent;
   border-radius: 500px;
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.footer__btn:hover {
+  color: #213564;
+  background: transparent;
+  border: 2px solid #213564;
+}
+
+.footer__btn:hover svg path {
+  stroke: #213564;
+}
+
+.footer__btn svg path {
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+  stroke: #fff;
 }
 
 .footer__btn.enable-lg {
@@ -725,10 +771,37 @@
   font-size: 14px;
   line-height: 14px;
   color: #757575;
+  max-width: 330px;
+  width: 100%;
 }
 
 .footer__label a {
   color: #757575;
+  text-decoration: underline;
+}
+
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__logo-p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: #333333;
+}
+
+.footer__logo-img {
+  margin-left: 6px;
 }
 
 * {
@@ -906,9 +979,70 @@ ul {
   .header__media:nth-of-type(2) {
     margin-right: 0;
   }
+
+  .footer__form {
+    max-width: 310px;
+  }
 }
 
 @media (max-width: 992px) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .footer__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__col {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FFFFFF;
+  }
+
+  .footer__col.last {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .footer__col-wrapper.list__mb {
+    margin-bottom: 0;
+  }
+
+  .footer__li.mb {
+    margin-bottom: 16px;
+  }
+
+  .footer__li:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
+  .footer__media {
+    margin-bottom: 0;
+  }
+
+  .footer__download {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
   .footer__download.disable-lg {
     display: none;
   }
@@ -917,6 +1051,33 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .footer__download svg {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  .footer__download-p {
+    text-align: left;
+    max-width: 80px;
+    width: 100%;
+  }
+
+  .footer__form {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FFFFFF;
+    max-width: 100%;
+  }
+
+  .footer__input {
+    padding-right: 10px;
+  }
+
+  .footer__btn {
+    width: 40px;
+    height: 40px;
   }
 
   .footer__btn.disable-lg {

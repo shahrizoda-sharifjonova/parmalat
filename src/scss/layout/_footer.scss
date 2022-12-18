@@ -2,17 +2,49 @@
     background: #DAF2FF;
     padding-top: 70px;
     padding-bottom: 63px;
+    @include media(992){
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     &__body{
         display: flex;
         justify-content: space-between;
         align-items: stretch;
+        @include media(992){
+            flex-direction: column;
+        }
     }
     &__col{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        &.notjcsb{
-            justify-content: flex-start;
+        justify-content: flex-start;
+        @include media(992){
+            flex-direction: row;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #FFFFFF;
+        }
+        &.first{
+            align-items: flex-end;
+        }
+        &.last{
+            justify-content: space-between;
+            @include media(992){
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                justify-content: flex-end;
+            }
+        }
+        &-wrapper{
+            width: 144px;
+            &.list__mb{
+                margin-bottom: 27px;
+                @include media(992){
+                    margin-bottom: 0;
+                }
+            }
         }
     }
     &__p{
@@ -43,8 +75,16 @@
     }
     &__li{
         width: max-content;
+        &.mb{
+            @include media(992){
+                margin-bottom: 16px;
+            }
+        }
         &:not(:last-of-type){
             margin-bottom: 27px;
+            @include media(992){
+                margin-bottom: 0;
+            }
         }
     }
     &__link{
@@ -54,13 +94,27 @@
         text-transform: uppercase;
         color: #213564;
     }
+    &__medias{
+        display: flex;
+    }
     &__media{
         margin-bottom: 17px;
+        display: block;
+        @include media(992){
+            margin-bottom: 0;
+        }
+        &:first-of-type{
+            margin-right: 20px;
+        }
     }
     &__download{
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        @include media(992){
+            flex-direction: row;
+            align-items: flex-start;
+        }
         &.disable-lg{
             @include media(992){
                 display: none;
@@ -74,6 +128,10 @@
         }
         svg{
             margin-bottom: 8px;
+            @include media(992){
+                margin-bottom: 0;
+                margin-right: 10px;
+            }
         }
         &-p{
             font-weight: 700;
@@ -82,11 +140,25 @@
             text-align: right;
             color: #213564;
             width: max-content;
+            @include media(992){
+                text-align: left;
+                max-width: 80px;
+                width: 100%;
+            }
         }
     }
     &__form{
         max-width: 415px;
         width: 100%;
+        @include media(1200){
+            max-width: 310px;
+        }
+        @include media(992){
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #FFFFFF;
+            max-width: 100%;
+        }
     }
     &__subtitle{
         font-weight: 700;
@@ -116,6 +188,9 @@
         font-size: 15px;
         line-height: 23px;
         color: #333333;
+        @include media(992){
+            padding-right: 10px;
+        }
         &::placeholder{
             font-weight: 500;
             font-size: 15px;
@@ -135,8 +210,29 @@
         justify-content: center;
         align-items: center;
         background: #213564;
+        border: 2px solid transparent;
         border-radius: 500px;
-
+        transition: 300ms ease;
+        @include media(992){
+            width: 40px;
+            height: 40px;
+        }
+        &:hover{
+            color: #213564;
+            background: transparent;
+            border: 2px solid #213564;
+            svg{
+                path{
+                    stroke: #213564;
+                }
+            }
+        }
+        svg{
+            path{
+                transition: 300ms ease;
+                stroke: #fff;
+            }
+        }
         &.disable-lg{
             @include media(992){
                 display: none;
@@ -182,8 +278,26 @@
         font-size: 14px;
         line-height: 14px;
         color: #757575;
+        max-width: 330px;
+        width: 100%;
         a{
             color: #757575;
+            text-decoration: underline;
+        }
+    }
+    &__logo{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        &-p{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: right;
+            color: #333333;
+        }
+        &-img{
+            margin-left: 6px;
         }
     }
 }
