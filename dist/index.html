@@ -4,21 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220131151727">
+    <link rel="stylesheet" href="css/style.min.css?_v=20221218210421">
     <title>Document</title>
   </head>
   <body> 
     <div class="wrapper"> 
-            <header class="header"> 
-              <p>header</p>
+            <header class="header">
+              <nav class="header__nav container"><a class="header__logo" href="index.html"><img src="img/logo.svg" alt="" draggable="false"></a>
+                <div class="menu"> <span class="menu-btn"></span></div>
+                <div class="header__content">
+                  <ul class="header__list">
+                    <div class="header__dropdown"> 
+                      <button class="header__dropdown-button" type="button">
+                        Продукты <svg width="6" height="3" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 0L3.00499 3L0 0H6Z" fill="#213563"/>
+</svg>
+                      </button>
+                      <div class="header__dropdown-content">
+                        <li class="header__dropdown-li"> <a class="header__dropdown-link" href="#!">Молоко</a></li>
+                        <li class="header__dropdown-li"> <a class="header__dropdown-link" href="#!">Молоко</a></li>
+                        <li class="header__dropdown-li"> <a class="header__dropdown-link" href="#!">Молоко</a></li>
+                      </div>
+                    </div>
+                    <li class="header__li"> <a class="header__link" href="#!">РЕЦЕПТЫ </a></li>
+                    <li class="header__li"> <a class="header__link" href="#!">видео </a></li>
+                    <li class="header__li"> <a class="header__link" href="#!">где купить</a></li>
+                  </ul>
+                  <div class="header__profile hidden"> <a class="header__profile-link" href="#!">Личный кабинет</a>
+                    <div class="header__profile-img"> <img src="img/profile-icon.svg" alt="" draggable="false"></div>
+                  </div>
+                  <div class="header__medias">
+                    <div class="header__medias-content"> <a class="header__media" href="https://youtube.com"> <img src="img/youtube-icon.svg" alt="" draggable="false"></a><a class="header__media" href="https://telegram.com"> <img src="img/tg-icon.svg" alt="" draggable="false"></a></div><a class="header__btn" href="#!">Хочу попробовать!</a>
+                  </div>
+                </div>
+              </nav>
             </header>
-            <main class="main"> 
-              <p>main </p>
-            </main>
-            <footer class="footer">  
-              <p>footer</p>
-            </footer>
+      <div class="main"></div>
+            <footer class="footer"></footer>
     </div>
-    <script src="js/app.min.js?_v=20220131151727"> </script>
+    <script src="js/app.min.js?_v=20221218210421"> </script>
   </body>
 </html>

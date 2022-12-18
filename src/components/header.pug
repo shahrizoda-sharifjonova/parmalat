@@ -1,3 +1,38 @@
 mixin header()
-    header.header 
-        p header
+    header.header
+        nav.header__nav.container
+            a(href="index.html").header__logo
+                img(src="@img/logo.svg", alt="" draggable="false")
+            .menu 
+                span.menu-btn
+            .header__content
+                ul.header__list
+                    .header__dropdown 
+                        button(type="button").header__dropdown-button Продукты 
+                            <svg width="6" height="3" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 0L3.00499 3L0 0H6Z" fill="#213563"/>
+                            </svg>
+                        .header__dropdown-content
+                            li.header__dropdown-li 
+                                a(href="#!").header__dropdown-link Молоко
+                            li.header__dropdown-li 
+                                a(href="#!").header__dropdown-link Молоко
+                            li.header__dropdown-li 
+                                a(href="#!").header__dropdown-link Молоко
+                    li.header__li 
+                        a(href="#!").header__link РЕЦЕПТЫ 
+                    li.header__li 
+                        a(href="#!").header__link видео 
+                    li.header__li 
+                        a(href="#!").header__link где купить
+                .header__profile.hidden 
+                    a(href="#!").header__profile-link Личный кабинет
+                    .header__profile-img 
+                        img(src="@img/profile-icon.svg", alt="" draggable="false") 
+                .header__medias
+                    .header__medias-content 
+                        a(href="https://youtube.com").header__media 
+                            img(src="@img/youtube-icon.svg", alt="" draggable="false")
+                        a(href="https://telegram.com").header__media 
+                            img(src="@img/tg-icon.svg", alt="" draggable="false")
+                    a(href="#!").header__btn Хочу попробовать!
