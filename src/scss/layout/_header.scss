@@ -5,6 +5,7 @@
     padding-top: 13px;
     padding-bottom: 13px;
     position: relative;
+    z-index: 2;
     @include media(575){
         padding-top: 7px;
         padding-bottom: 7px;
@@ -175,7 +176,8 @@
             transition: 300ms ease;
             display: block;
             &:hover{
-                 color: #fff;
+                color: #fff;
+                background: #213564;
             }
         }
     }
@@ -273,7 +275,7 @@
             background: #213564;
             border-radius: 50% 50% 0 0;
             z-index: -1;
-            transition: 500ms ease;
+            transition: 300ms ease;
         }
         &:hover{
             color: #FFFFFF;
