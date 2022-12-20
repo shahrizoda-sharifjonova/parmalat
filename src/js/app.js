@@ -2,9 +2,19 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
-// const swiper = new Swiper();
+const swiper = new Swiper();
+
+new Swiper(".about__swiper", {
+    grabCursor: true,
+    modules: [ Navigation],
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".about__button-prev",
+      prevEl: ".about__button-next",
+    },
+  });
 
 const dropdown = document.querySelector('.header__dropdown');
 const dropdownBtn = document.querySelector('.header__dropdown-button');
