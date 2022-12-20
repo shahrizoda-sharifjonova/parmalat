@@ -1,18 +1,22 @@
 .asks{
-    padding-top: 80px;
     padding-bottom: 80px;
-    @include media(768){
-        padding-top: 60px;
+    @include media(1200){
         padding-bottom: 60px;
     }
     &__body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include media(1200){
+            flex-direction: column-reverse;
+        }
     }
     &__accordions{
         margin-right: 40px;
         width: 100%;
+        @include media(1200){
+            margin-right: 0;
+        }
     }
     .accordion{
         padding-bottom: 18px;
@@ -32,10 +36,19 @@
             width: 100%;
             padding-right: 5px;
             text-align: left;
+            @include media(768){
+                font-size: 16px;
+                line-height: 110%;
+            }
             &.first,
             &.active{
                 .accordion__arrow{
                     background: #009ACE20;
+                }
+            }
+            &.active{
+                .accordion__arrow{
+                    transform: rotate(-45deg);
                 }
             }
         }
@@ -47,11 +60,32 @@
             justify-content: center;
             align-items: center;
             border-radius: 50%;
+            transition: 300ms ease;
         }
         &__content{
             display: none;
+            padding-top: 12px;
             &.active{
                 display: block;
+            }
+        }
+        &__p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 120%;
+            color: #333333;
+        }
+    }
+    &__img{
+        @include media(1200){
+            margin-bottom: 20px;
+            line-height: 0;
+            max-width: 700px;
+            width: 100%;
+        }
+        img{
+            @include media(1200){
+                width: 100%;
             }
         }
     }
