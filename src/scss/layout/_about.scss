@@ -1,9 +1,55 @@
 .about{
     padding-top: 80px;
     padding-bottom: 80px;
+    position: relative;
+    isolation: isolate;
+    overflow-x: hidden;
     @include media(768){
         padding-top: 60px;
         padding-bottom: 60px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 330px;
+        right: 330px;
+        background: #009ACE;
+        opacity: 0.3;
+        filter: blur(150px);
+        width: 312px;
+        height: 312px;
+        z-index: -1;
+        @include media(1200){
+            right: 0;
+            top: 230px;
+        }
+        @include media(768){
+            display: none;
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 330px;
+        right: 330px;
+        background: rgba(0, 45, 206, 0.61);
+        opacity: 0.3;
+        filter: blur(150px);
+        width: 570px;
+        height: 570px;
+        z-index: -1;
+        @include media(1200){
+            right: 0;
+            width: 400px;
+            height: 400px;
+        }
+        @include media(768){
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 283px;
+            height: 283px;
+            right: -50%;
+        }
     }
     &__body{
         display: flex;
@@ -21,6 +67,7 @@
         border-radius: 6px;
         margin-right: 21px;
         padding: 56px 60px;
+        position: relative;
         @include media(1200){
             margin-right: 0;
             margin-bottom: 60px;
@@ -32,6 +79,18 @@
             backdrop-filter: blur(0px);
             padding: 0;
         }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 135px;
+            height: 96px;
+            left: -26px;
+            bottom: -33px;
+            background: url(../img/about-butterfly.svg) center / contain no-repeat;
+            @include media(768){
+                display: none;
+            }
+        }
     }
     &__content{
         display: flex;
@@ -39,10 +98,16 @@
         justify-content: space-between;
         @include media(768){
             flex-direction: column;
+            align-items: center;
         }
         &-left{
             margin-right: 20px;
             margin-left: -30px;
+            @include media(768){
+                margin-right: 0;
+                margin-left: 0;
+                margin-bottom: 30px;
+            }
         }
     }
     &__title{
@@ -70,6 +135,7 @@
             font-size: 16px;
             line-height: 130%;
             text-align: center;
+            margin-bottom: 10px;
         }
     }
     &__items{
@@ -79,18 +145,30 @@
         margin-bottom: 15px;
         @include media(768){
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            margin-bottom: 30px;
         }
     }
     &__item{
         width: calc(33.3333% - 10px);
         display: flex;
         align-items: center;
+        @include media(768){
+            width: max-content;
+            flex-direction: column;
+        }
         &:not(:last-of-type){
             margin-right: 30px;
+            @include media(768){
+                margin-right: 0;
+            }
         }
         &-img{
             margin-right: 5px;
+            @include media(768){
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
         }
         &-p{
             font-weight: 700;
@@ -99,10 +177,36 @@
             color: #213564;
             max-width: 167px;
             width: 100%;
+            @include media(768){
+                text-align: center;
+            }
         }
     }
     &__img{
         margin-bottom: 15px;
+        position: relative;
+        @include media(768){
+            max-width: 235px;
+            width: 100%;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 105px;
+            height: 75px;
+            left: -15px;
+            top: -35px;
+            background: url(../img/about-butterfly.svg) center / contain no-repeat;
+            display: none;
+            @include media(768){
+                display: block;
+            }
+        }
+        img{
+            @include media(768){
+                width: 100%;
+            }
+        }
     }
     &__download{
         display: flex;
@@ -117,7 +221,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             color: #213564;
-            max-width: 135px;
+            max-width: 155px;
             width: 100%;
         }
     }
@@ -126,6 +230,9 @@
         flex-direction: column;
         align-items: stretch;
         flex: 1 1 auto;
+        @include media(768){
+            width: 100%;
+        }
     }
     &__li{
         display: flex;
@@ -138,6 +245,20 @@
         font-size: 18px;
         line-height: 120%;
         color: #757575;
+        @include media(768){
+            font-size: 16px;
+            line-height: 120%;
+        }
+        &.lg{
+            @include media(768){
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            p{
+                text-align: left;
+                margin-top: 3px;
+            }
+        }
         p{
             max-width: 258px;
             width: 100%;
@@ -146,6 +267,10 @@
             line-height: 120%;
             text-align: right;
             color: #333333;
+            @include media(768){
+                font-size: 16px;
+                line-height: 120%;
+            }
         }
     }
     &__subtitle{
@@ -189,6 +314,10 @@
             line-height: 120%;
             text-align: center;
             color: #333333;
+            @include media(768){
+                font-size: 16px;
+                line-height: 120%;
+            }
         }
     }
     &__buttons{
@@ -209,8 +338,10 @@
             align-items: center;
             background: #009ACE25;
             border-radius: 50%;
+            transform: translateX(50%);
             &.swiper-button-disabled{
                 background: #009ACE10;
+                cursor: auto;
             }
         }
         &-next{
@@ -222,7 +353,9 @@
             align-items: center;
             background: #009ACE25;
             border-radius: 50%;
+            transform: translateX(-50%);
             &.swiper-button-disabled{
+                cursor: auto;
                 background: #009ACE10;
             }
         }

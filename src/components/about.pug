@@ -21,7 +21,7 @@ mixin about()
                     .about__content-left 
                         .about__img 
                             img(src="@img/about-img.svg", alt="" draggable="false")
-                        .about__download 
+                        a(href="#!").about__download 
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="50" height="50" rx="25" fill="#213564"/>
                                 <path d="M20.0615 24.1718L25.454 28.9189L30.8003 24.1718" stroke="white" stroke-width="1.38267" stroke-linecap="round" stroke-linejoin="round"/>
@@ -38,8 +38,8 @@ mixin about()
                         li.about__li Белки #[p 3,0г]
                         li.about__li Углеводы #[p 4,7 г (лактозы 0,01 г)]
                         li.about__li Энергетическая ценность #[p 197 кДж/47 ккал]
-                        li.about__li Условия хранения #[p От +2°С до +25°С. После вскрытия хранить 48 часов при +4±2°С]
-                        li.about__li Особенности #[p Из-за отсутствия лактозы имеет сладковатый вкус и может дать карамельный оттенок, что является нормой и не влияет на безопасность продукта]
+                        li.about__li.lg Условия хранения #[p От +2°С до +25°С. После вскрытия хранить 48 часов при +4±2°С]
+                        li.about__li.lg Особенности #[p Из-за отсутствия лактозы имеет сладковатый вкус и может дать карамельный оттенок, что является нормой и не влияет на безопасность продукта]
             .about__right 
                 p.about__subtitle ВСЕ продукты Parmalat Professional
                 .about__slider.slider 
