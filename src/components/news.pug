@@ -1,0 +1,14 @@
+mixin news()
+    .news 
+        .news__body.container 
+            .news__content
+                .news__img 
+                    img(src="@img/news-letter.svg", alt="" draggable="false")
+                form(action="").news__form
+                    p.news__subtitle Новости для шеф-поваров и рестораторов в нашей рассылке! 
+                    .news__row 
+                        input(type="email" placeholder="Введите ваш Email").news__input 
+                        button(type="button").news__button Подписаться
+                    .news__checkbox 
+                        input(type="checkbox" name="checkbox" id="newsCheckbox")
+                        p.news__p Нажимая кнопку, я подтверждаю, что ознакомлен (а) с #[a(href="#!") Политикой конфиденциальности] и даю согласие на обработку персональных данных
