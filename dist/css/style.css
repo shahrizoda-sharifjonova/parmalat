@@ -1801,6 +1801,35 @@
 .recipes {
   padding-top: 77px;
   padding-bottom: 60px;
+  position: relative;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+.recipes::before {
+  content: "";
+  position: absolute;
+  width: 384px;
+  height: 384px;
+  background: rgba(0, 45, 206, 0.61);
+  opacity: 0.3;
+  -webkit-filter: blur(150px);
+          filter: blur(150px);
+  bottom: 700px;
+  left: 520px;
+}
+
+.recipes::after {
+  content: "";
+  position: absolute;
+  width: 517px;
+  height: 517px;
+  background: #009ACE;
+  opacity: 0.3;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  bottom: 390px;
+  left: 175px;
 }
 
 .recipes__row {
@@ -2751,6 +2780,14 @@ ul {
   .recipes {
     padding-top: 54px;
     padding-bottom: 40px;
+  }
+
+  .recipes::before {
+    display: none;
+  }
+
+  .recipes::after {
+    display: none;
   }
 
   .recipes .how__top {

@@ -1,9 +1,40 @@
 .recipes{
     padding-top: 77px;
     padding-bottom: 60px;
+    position: relative;
+    overflow-x: hidden;
+    z-index: -1;
     @include media(768){
         padding-top: 54px;
         padding-bottom: 40px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 384px;
+        height: 384px;
+        background: rgba(0, 45, 206, 0.61);
+        opacity: 0.3;
+        filter: blur(150px);
+        bottom: 700px;
+        left: 520px;
+        @include media(768){
+            display: none;
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 517px;
+        height: 517px;
+        background: #009ACE;
+        opacity: 0.3;
+        filter: blur(200px);
+        bottom: 390px;
+        left: 175px;
+        @include media(768){
+            display: none;
+        }
     }
     .how__top{
         @include media(768){
