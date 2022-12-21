@@ -1,7 +1,45 @@
 .how{
     padding-bottom: 80px;
+    position: relative;
+    isolation: isolate;
+    overflow-x: hidden;
     @include media(1200){
         padding-bottom: 60px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 328px;
+        height: 328px;
+        left: 600px;
+        bottom: 225px;
+        background: rgba(0, 45, 206, 0.61);
+        opacity: 0.3;
+        filter: blur(150px);
+        border-radius: 50%;
+        z-index: -1;
+        @include media(992){
+            width: 205px;
+            height: 205px;
+            right: -56px;
+            left: auto;
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 418px;
+        height: 418px;
+        background: #009ACE;
+        opacity: 0.3;
+        filter: blur(150px);
+        border-radius: 50%;
+        bottom: 0;
+        left: 300px;
+        z-index: -1;
+        @include media(992){
+            display: none;
+        }
     }
     &__top{
         display: flex;
