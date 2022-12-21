@@ -1,0 +1,284 @@
+.recipes{
+    padding-top: 77px;
+    padding-bottom: 60px;
+    @include media(768){
+        padding-top: 54px;
+        padding-bottom: 40px;
+    }
+    .how__top{
+        @include media(768){
+            margin-bottom: 20px;
+        }
+    }
+    &__row{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        @include media(768){
+            flex-direction: column;
+            margin-bottom: 20px;
+
+        }
+    }
+    &__profile{
+        display: flex;
+        align-items: flex-start;
+        @include media(768){
+            margin-bottom: 30px;
+        }
+        &-img{
+            margin-right: 18px;
+        }
+        &-name{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 120%;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+        &-p{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+            color: #757575;
+            max-width: 280px;
+            width: 100%;
+        }
+    }
+    &__texts{
+        @include media(1200){
+            max-width: 500px;
+            width: 100%;
+        }
+        @include media(992){
+            max-width: 290px;
+        }
+    }
+    &__subtitle{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #213564;
+        margin-bottom: 10px;
+        @include media(992){
+            font-size: 22px;
+            line-height: 110%;
+        }
+    }
+    &__desc{
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 120%;
+        color: #333333;
+        max-width: 552px;
+        width: 100%;
+        @include media(1200){
+            font-size: 20px;
+        }
+        @include media(992){
+            font-size: 16px;
+            line-height: 120%;
+        }
+    }
+    &__img{
+        width: 100%;
+        margin-bottom: 40px;
+        @include media(768){
+            margin-bottom: 20px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__bottom{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include media(768){
+            flex-direction: column-reverse;
+        }
+    }
+    &__left{
+        max-width: 380px;
+        width: 100%;
+        @include media(1200){
+            max-width: 330px;
+        }
+        @include media(768){
+            max-width: 100%;
+        }
+    }
+    &__list{
+        margin-bottom: 100px;
+        @include media(768){
+            margin-bottom: 20px;
+        }
+        &.disable-md{
+            @include media(768){
+                display: none;
+            }
+        }
+        &.enable-md{
+            display: none;
+            @include media(768){
+                display: block;
+            }
+        }
+        &-title{
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 110%;
+            color: #333333;   
+            margin-bottom: 10px;
+            @include media(768){
+                font-size: 18px;
+                line-height: 110%;
+            }         
+        }
+    }
+    &__li{
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #DFDFDF;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: #333333;
+        @include media(768){
+            font-size: 16px;
+            line-height: 120%;
+        }
+        p{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 120%;
+            text-align: right;
+            color: #333333;
+            margin-left: 83px;
+            min-width: max-content;
+            @include media(768){
+                font-size: 16px;
+                line-height: 120%;
+                margin-left: 30px;
+            }
+        }
+    }
+    &__info{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        font-family: 'Georgia';
+        font-style: italic;
+        font-weight: 500;
+        font-size: 45px;
+        line-height: 50px;
+        text-align: right;
+        letter-spacing: 1.5px;
+        color: #009ACE;
+        margin-bottom: 12px;
+        @include media(768){
+            text-align: left;
+            justify-content: flex-end;
+            flex-direction: row-reverse;
+            font-size: 40px;
+            line-height: 50px;
+        }
+        img{
+            margin-right: 22px;
+            @include media(768){
+                width: 52px;
+                margin-left: 15px;
+                margin-right: 0;
+            }
+        }
+    }
+    &__text{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 140%;
+        text-align: right;
+        color: #213564;
+        max-width: 300px;
+        width: 100%;
+        margin-right: 0;
+        margin-left: auto;
+        @include media(768){
+            font-size: 16px;
+            line-height: 140%;
+            text-align: left;
+            max-width: 100%;
+        }
+    }
+    &__items{
+        max-width: 580px;
+        width: 100%;
+        @include media(1200){
+            max-width: 480px;
+            width: 100%;
+        }
+        @include media(992){
+            max-width: 315px;
+        }
+        @include media(768){
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    &__item{
+        display: flex;
+        align-items: flex-start;
+        @include media(992){
+            flex-direction: column;
+        }
+        &-img{
+            margin-right: 40px;
+            @include media(1200){
+                margin-right: 20px;
+            }
+            @include media(992){
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+            img{
+                @include media(992){
+                    width: 100%;
+                }
+            }
+        }
+        &:not(:last-of-type){
+            margin-bottom: 20px;
+            @include media(768){
+                margin-bottom: 24px;
+            }
+        }
+        &-subtitle{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 110%;
+            color: #333333;
+            margin-bottom: 4px;
+            @include media(768){
+                font-size: 16px;
+                line-height: 110%;
+            }
+        }
+        &-p{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            color: #333333;
+            @include media(768){
+                font-size: 16px;
+                line-height: 120%;
+            }
+        }
+    }
+}
