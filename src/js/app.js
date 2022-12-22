@@ -16,6 +16,32 @@ new Swiper(".about__swiper", {
     },
   });
 
+new Swiper(".addition__swiper", {
+    grabCursor: true,
+    modules: [Navigation],
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".addition__button-next",
+      prevEl: ".addition__button-prev",
+    },
+});
+new Swiper(".addition__swiper-two", {
+    grabCursor: true,
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".addition__button-next",
+      prevEl: ".addition__button-prev",
+    },
+    pagination: {
+      el: '.addition__pagination',
+      type: 'fraction',
+      formatFractionCurrent: function (number) {
+          return '' + number;
+      }
+    },
+});
+
 const dropdown = document.querySelector('.header__dropdown');
 const dropdownBtn = document.querySelector('.header__dropdown-button');
 const dropdownContent = document.querySelector('.header__dropdown-content');
