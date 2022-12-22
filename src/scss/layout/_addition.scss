@@ -17,6 +17,9 @@
         width: 780px;
         height: 1px;
         background: linear-gradient(270deg, rgba(189, 189, 189, 0) 5.04%, #BDBDBD 49.71%, rgba(189, 189, 189, 0) 95.36%);
+        @include media(768){
+            width: 280px;
+        }
     }
     &::after{
         content: '';

@@ -1,0 +1,21 @@
+mixin buy()
+    .buy 
+        .buy__body.container 
+            .buy__left 
+                h2.buy__title где купить
+                p.buy__desc Приобрести продукцию Parmalat Professional можно у наших дистрибьюторов.
+                .buy__row 
+                    .buy__info  
+                        p.buy__subtitle 60+
+                        p.buy__p дистрибьюторов
+                    .buy__info  
+                        p.buy__subtitle 9
+                        p.buy__p городов России
+                .buy__img.enable-lg 
+                    img(src="@img/buy-map.svg", alt="" draggable="false")   
+                a(href="#!").how__link
+                    .how__link-img 
+                        img(src="@img/buy-cart.svg", alt="" draggable="false")
+                    p.how__link-p связаться #[br] с представителем
+            .buy__img.disable-lg
+                img(src="@img/buy-map.svg", alt="" draggable="false")

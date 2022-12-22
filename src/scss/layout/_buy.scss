@@ -1,0 +1,196 @@
+.buy{
+    padding-bottom: 80px;
+    overflow-x: hidden;
+    position: relative;
+    overflow-x: hidden;
+    isolation: isolate;
+    @include media(992){
+        padding-top: 40px;
+        padding-bottom: 54px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 780px;
+        height: 1px;
+        background: linear-gradient(270deg, rgba(189, 189, 189, 0) 5.04%, #BDBDBD 49.71%, rgba(189, 189, 189, 0) 95.36%);
+        @include media(768){
+            width: 280px;
+        }
+    }
+    &__body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__left{
+        max-width: 400px;
+        width: 100%;
+        @include media(1200){
+            max-width: 350px;
+        }
+        @include media(992){
+            max-width: 100%;
+        }
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #213564;
+        width: max-content;
+        margin-bottom: 40px;
+        @include media(1200){
+            font-size: 46px;
+            line-height: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    &__desc{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: #333333;
+        margin-bottom: 30px;
+        @include media(1200){
+            font-size: 16px;
+            line-height: 120%;
+            margin-bottom: 20px;
+        }
+    }
+    &__row{
+        display: flex;
+        margin-bottom: 40px;
+        @include media(1200){
+            margin-bottom: 30px;
+        }
+        @include media(992){
+            margin-bottom: 0;
+        }
+    }
+    &__info{
+        position: relative;
+        isolation: isolate;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 204px;
+            height: 204px;
+            background: rgba(0, 45, 206, 0.6);
+            opacity: 0.3;
+            filter: blur(50px);
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            @include media(768){
+                bottom: 0;
+                top: auto;
+                width: 127px;
+                height: 127px;
+            }
+        }
+        &:first-of-type{
+            margin-right: 65px;
+            @include media(1200){
+                margin-right: 25px;
+            }
+            &::before{
+                bottom: 0;
+                right: 0;
+                background: #009ACE;
+                filter: blur(100px);
+                width: 188px;
+                height: 188px;
+                @include media(768){
+                    width: 139px;
+                    height: 139px;
+                    top: 0;
+                    bottom: auto;
+                }
+            }
+        }
+    }
+    &__subtitle{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 71px;
+        text-transform: uppercase;
+        color: #213564;
+        margin-bottom: 5px;
+        @include media(1200){
+            font-size: 46px;
+            line-height: 100%;
+            margin-bottom: 0;
+        }
+    }
+    &__p{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: #213564;        
+        @include media(1200){
+            font-size: 16px;
+            line-height: 120%;
+        }
+    }
+    &__img{
+        @include media(992){
+            margin-bottom: 8px;
+            width: max-content;
+        }
+        @include media(768){
+            width: 100%;
+        }
+        @include media(575){
+            width: max-content;
+            height: 275px;
+        }
+        img{
+            width: 800px;
+            @include media(1200){
+                width: 670px;
+                object-fit: cover;
+            }
+            @include media(768){
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &.enable-lg{
+            display: none;
+            @include media(992){
+                display: block;
+            }
+        }
+        &.disable-lg{
+            display: block;
+            @include media(992){
+                display: none;
+            }
+        }
+    }
+    .how__link{
+        margin-left: 0;
+        margin-right: auto;
+        justify-content: flex-start;
+        @include media(768){
+            flex-direction: row;
+            align-items: center;
+        }
+        img{
+            line-height: 0;
+        }
+        p{
+            @include media(768){
+                text-align: left;
+                margin-left: 17px;
+            }
+        }
+    }
+}
