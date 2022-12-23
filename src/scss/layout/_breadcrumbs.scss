@@ -1,0 +1,29 @@
+.breadcrumbs{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include media(768){
+        display: none;
+    }
+    &__p{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: #454545;
+        a{
+            color: #454545;
+            margin-left: 10px;
+            transition: 300ms ease;
+            &:first-of-type{
+                margin-left: 0;
+            }
+            &:not(:last-of-type){
+                margin-right: 10px;
+            }
+            &.active,
+            &:hover{
+                color: #182B4D;
+                font-weight: 600;
+            }
+        }
+    }
+}

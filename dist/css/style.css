@@ -1803,7 +1803,6 @@
   padding-bottom: 60px;
   position: relative;
   overflow-x: hidden;
-  z-index: -1;
 }
 
 .recipes::before {
@@ -2469,6 +2468,244 @@
   line-height: 0;
 }
 
+.breadcrumbs {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.breadcrumbs__p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  color: #454545;
+}
+
+.breadcrumbs__p a {
+  color: #454545;
+  margin-left: 10px;
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.breadcrumbs__p a:first-of-type {
+  margin-left: 0;
+}
+
+.breadcrumbs__p a:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.breadcrumbs__p a.active,
+.breadcrumbs__p a:hover {
+  color: #182B4D;
+  font-weight: 600;
+}
+
+.preparing {
+  padding-bottom: 80px;
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+.preparing::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: rgba(0, 45, 206, 0.61);
+  opacity: 0.3;
+  -webkit-filter: blur(150px);
+          filter: blur(150px);
+  left: 700px;
+  bottom: 475px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.preparing .recipes__desc {
+  max-width: 580px;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.preparing .recipes__list {
+  margin-bottom: 40px;
+}
+
+.preparing .recipes__infos {
+  max-width: 300px;
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 150px;
+}
+
+.preparing .recipes__infos.enable-md {
+  display: none;
+}
+
+.preparing .recipes__infos.disable-md {
+  display: block;
+}
+
+.preparing .recipes__info img {
+  margin-right: 0;
+  margin-left: 23px;
+}
+
+.preparing .recipes__text {
+  text-align: left;
+}
+
+.preparing__img {
+  width: 100%;
+  margin-bottom: 40px;
+  line-height: 0;
+}
+
+.preparing__img img {
+  width: 100%;
+}
+
+.preparing__left {
+  max-width: 580px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  width: 100%;
+  margin-right: 100px;
+}
+
+.preparing__content {
+  max-width: 300px;
+  width: 100%;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 5px 5px 20px rgba(33, 53, 100, 0.1);
+          box-shadow: 5px 5px 20px rgba(33, 53, 100, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  color: #213564;
+  position: relative;
+  z-index: 3;
+}
+
+.preparing__content::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 64px;
+  background: url(../img/about-butterfly.svg) center/cover no-repeat;
+  top: -48px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.technique {
+  padding-bottom: 80px;
+  position: relative;
+  isolation: isolate;
+}
+
+.technique::before {
+  content: "";
+  position: absolute;
+  width: 412px;
+  height: 412px;
+  border-radius: 50%;
+  top: -35px;
+  bottom: auto;
+  right: 700px;
+  background: #009ACE;
+  opacity: 0.4;
+  -webkit-filter: blur(150px);
+          filter: blur(150px);
+  z-index: -2;
+}
+
+.technique .how__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 50px;
+}
+
+.technique__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+}
+
+.technique__img {
+  max-width: 780px;
+  width: 100%;
+  position: relative;
+}
+
+.technique__img img {
+  width: 100%;
+}
+
+.technique__content {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 5px 5px 20px rgba(33, 53, 100, 0.1);
+          box-shadow: 5px 5px 20px rgba(33, 53, 100, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 6px;
+  padding: 40px;
+  max-width: 750px;
+  width: 100%;
+  top: -100px;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+}
+
+.technique__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  line-height: 0;
+}
+
+.technique__link img {
+  line-height: 0;
+}
+
+.technique__subtitle {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 110%;
+  color: #213564;
+  margin-bottom: 20px;
+}
+
+.technique__desc {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: #333333;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -2558,6 +2795,10 @@ ul {
   .how__item.active {
     max-width: 700px;
     width: 100%;
+  }
+
+  .technique::before {
+    right: 300px;
   }
 }
 
@@ -2811,6 +3052,14 @@ ul {
     width: 670px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+
+  .technique__img {
+    max-width: 660px;
+  }
+
+  .technique__content {
+    max-width: 580px;
   }
 }
 
@@ -3176,6 +3425,79 @@ ul {
 
   .buy__img.disable-lg {
     display: none;
+  }
+
+  .preparing::before {
+    width: 205px;
+    height: 205px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    top: 780px;
+    bottom: auto;
+    right: -40px;
+    left: auto;
+  }
+
+  .preparing__left {
+    max-width: 320px;
+    margin-right: 30px;
+    min-width: auto;
+  }
+
+  .technique {
+    padding-bottom: 60px;
+  }
+
+  .technique::before {
+    top: -370px;
+    right: 0;
+    width: 160px;
+    height: 160px;
+    opacity: 10;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+  }
+
+  .technique__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .technique .how__link {
+    margin-bottom: 0;
+  }
+
+  .technique__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-bottom: 30px;
+  }
+
+  .technique__content {
+    position: static;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+    border-radius: 0;
+    padding: 0;
+    margin-top: 12px;
+  }
+
+  .technique__desc {
+    font-size: 16px;
+    line-height: 120%;
   }
 }
 
@@ -3599,6 +3921,96 @@ ul {
   .buy .how__link p {
     text-align: left;
     margin-left: 17px;
+  }
+
+  .breadcrumbs {
+    display: none;
+  }
+
+  .preparing {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .preparing .recipes__texts {
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
+  .preparing .recipes__desc {
+    font-size: 16px;
+    line-height: 120%;
+    max-width: 100%;
+  }
+
+  .preparing .recipes__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .preparing .recipes__list {
+    margin-bottom: 30px;
+  }
+
+  .preparing .recipes__infos {
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
+  .preparing .recipes__infos.enable-md {
+    display: block;
+  }
+
+  .preparing .recipes__infos.disable-md {
+    display: none;
+  }
+
+  .preparing .recipes__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .preparing .recipes__profile {
+    margin-bottom: 0;
+  }
+
+  .preparing .recipes__items {
+    margin-bottom: 78px;
+  }
+
+  .preparing__img {
+    margin-bottom: 20px;
+  }
+
+  .preparing__left {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .preparing__content {
+    max-width: 100%;
+    padding: 40px 30px;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .technique__link {
+    max-width: 50px;
+    width: 100%;
+  }
+
+  .technique__subtitle {
+    margin-bottom: 4px;
   }
 }
 
