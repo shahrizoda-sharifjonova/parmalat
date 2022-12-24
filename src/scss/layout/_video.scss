@@ -1,0 +1,197 @@
+.video{
+    padding-bottom: 80px;
+    @include media(768){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #213564;
+        margin-bottom: 40px;
+        @include media(992){
+            margin-bottom: 24px;
+        }
+        @include media(768){
+            font-size: 22px;
+            line-height: 110%;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item{
+        width: calc(50% - 10px);
+        @include media(768){
+            width: 100%;
+        }
+        &:nth-of-type(odd){
+            margin-right: 20px;
+            @include media(768){
+                margin-right: 0;
+            }
+        }
+        &:not(:last-of-type){
+            margin-bottom: 40px;
+            @include media(768){
+                margin-bottom: 24px;
+            }
+        }
+    }
+    &__img{
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        line-height: 0;
+        @include media(1200){
+            margin-bottom: 12px;
+        }
+        img{
+            width: 100%;
+            line-height: 0;
+        }
+    }
+    &__link{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include media(992){
+            width: 50px;
+            height: 50px;
+        }
+        img{
+            @include media(992){
+                width: 100%;
+            }
+        }
+    }
+    &__subtitle{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        color: #213564;
+        margin-bottom: 10px;  
+        @include media(1200){
+            font-size: 32px;
+        }      
+        @include media(992){
+            font-size: 22px;
+            line-height: 110%;
+            margin-bottom: 4px;
+        }
+    }
+    &__desc{
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 120%;
+        color: #333333;
+        @include media(992){
+            font-size: 16px;
+            line-height: 120%;
+        }
+    }
+}
+
+.recipe{
+    padding-bottom: 80px;
+    @include media(768){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #213564;
+        margin-bottom: 40px;
+        @include media(992){
+            margin-bottom: 24px;
+        }
+        @include media(768){
+            font-size: 22px;
+            line-height: 110%;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item{
+        width: calc(50% - 10px);
+        @include media(768){
+            width: 100%;
+        }
+        &:nth-of-type(odd){
+            margin-right: 20px;
+            @include media(768){
+                margin-right: 0;
+            }
+        }
+        &:not(:last-of-type){
+            margin-bottom: 40px;
+            @include media(768){
+                margin-bottom: 24px;
+            }
+        }
+    }
+    &__img{
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        line-height: 0;
+        @include media(1200){
+            margin-bottom: 12px;
+        }
+        img{
+            width: 100%;
+            line-height: 0;
+        }
+    }
+    &__link{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include media(992){
+            width: 50px;
+            height: 50px;
+        }
+        img{
+            @include media(992){
+                width: 100%;
+            }
+        }
+    }
+    &__subtitle{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        color: #213564;
+        margin-bottom: 10px;  
+        @include media(1200){
+            font-size: 32px;
+        }      
+        @include media(992){
+            font-size: 22px;
+            line-height: 110%;
+            margin-bottom: 4px;
+        }
+    }
+    &__desc{
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 120%;
+        color: #333333;
+        @include media(992){
+            font-size: 16px;
+            line-height: 120%;
+        }
+    }
+}

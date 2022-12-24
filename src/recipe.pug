@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.min.css")
+        title Document
+    body 
+        .wrapper 
+            include components/header 
+            +header
+            .main
+                .breadcrumbs 
+                    .breadcrumbs__body.container 
+                        p.breadcrumbs__p #[a(href="index.html") Главная ] / #[a(href="video.html").active Рецепты ] 
+                include components/recipe 
+                +recipe
+            include components/footer 
+            +footer
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js") 
+        script(src="js/app.min.js")

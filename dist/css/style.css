@@ -2706,6 +2706,150 @@
   color: #333333;
 }
 
+.video {
+  padding-bottom: 80px;
+}
+
+.video__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #213564;
+  margin-bottom: 40px;
+}
+
+.video__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.video__item {
+  width: calc(50% - 10px);
+}
+
+.video__item:nth-of-type(odd) {
+  margin-right: 20px;
+}
+
+.video__item:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+
+.video__img {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  line-height: 0;
+}
+
+.video__img img {
+  width: 100%;
+  line-height: 0;
+}
+
+.video__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.video__subtitle {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: #213564;
+  margin-bottom: 10px;
+}
+
+.video__desc {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 120%;
+  color: #333333;
+}
+
+.recipe {
+  padding-bottom: 80px;
+}
+
+.recipe__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #213564;
+  margin-bottom: 40px;
+}
+
+.recipe__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recipe__item {
+  width: calc(50% - 10px);
+}
+
+.recipe__item:nth-of-type(odd) {
+  margin-right: 20px;
+}
+
+.recipe__item:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+
+.recipe__img {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  line-height: 0;
+}
+
+.recipe__img img {
+  width: 100%;
+  line-height: 0;
+}
+
+.recipe__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.recipe__subtitle {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: #213564;
+  margin-bottom: 10px;
+}
+
+.recipe__desc {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 120%;
+  color: #333333;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -3060,6 +3204,22 @@ ul {
 
   .technique__content {
     max-width: 580px;
+  }
+
+  .video__img {
+    margin-bottom: 12px;
+  }
+
+  .video__subtitle {
+    font-size: 32px;
+  }
+
+  .recipe__img {
+    margin-bottom: 12px;
+  }
+
+  .recipe__subtitle {
+    font-size: 32px;
   }
 }
 
@@ -3496,6 +3656,54 @@ ul {
   }
 
   .technique__desc {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .video__title {
+    margin-bottom: 24px;
+  }
+
+  .video__link {
+    width: 50px;
+    height: 50px;
+  }
+
+  .video__link img {
+    width: 100%;
+  }
+
+  .video__subtitle {
+    font-size: 22px;
+    line-height: 110%;
+    margin-bottom: 4px;
+  }
+
+  .video__desc {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .recipe__title {
+    margin-bottom: 24px;
+  }
+
+  .recipe__link {
+    width: 50px;
+    height: 50px;
+  }
+
+  .recipe__link img {
+    width: 100%;
+  }
+
+  .recipe__subtitle {
+    font-size: 22px;
+    line-height: 110%;
+    margin-bottom: 4px;
+  }
+
+  .recipe__desc {
     font-size: 16px;
     line-height: 120%;
   }
@@ -4011,6 +4219,50 @@ ul {
 
   .technique__subtitle {
     margin-bottom: 4px;
+  }
+
+  .video {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .video__title {
+    font-size: 22px;
+    line-height: 110%;
+  }
+
+  .video__item {
+    width: 100%;
+  }
+
+  .video__item:nth-of-type(odd) {
+    margin-right: 0;
+  }
+
+  .video__item:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+
+  .recipe {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .recipe__title {
+    font-size: 22px;
+    line-height: 110%;
+  }
+
+  .recipe__item {
+    width: 100%;
+  }
+
+  .recipe__item:nth-of-type(odd) {
+    margin-right: 0;
+  }
+
+  .recipe__item:not(:last-of-type) {
+    margin-bottom: 24px;
   }
 }
 
