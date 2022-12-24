@@ -461,6 +461,17 @@
   background: #DAF2FF;
   padding-top: 70px;
   padding-bottom: 63px;
+  position: relative;
+}
+
+.footer__up {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  -webkit-box-shadow: 0px 0px 10px rgba(33, 53, 100, 0.15);
+          box-shadow: 0px 0px 10px rgba(33, 53, 100, 0.15);
+  border-radius: 50%;
+  height: 50px;
 }
 
 .footer__body {
@@ -2857,6 +2868,7 @@
           box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   font-family: circe, sans-serif;
+  scroll-behavior: smooth;
 }
 
 *:focus,
@@ -3227,6 +3239,20 @@ ul {
   .footer {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+  .footer__up {
+    top: 0;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer__up img {
+    width: 100%;
   }
 
   .footer__body {

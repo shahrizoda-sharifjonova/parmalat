@@ -2,11 +2,31 @@
     background: #DAF2FF;
     padding-top: 70px;
     padding-bottom: 63px;
+    position: relative;
     @include media(992){
         padding-top: 40px;
         padding-bottom: 40px;
     }
-
+    &__up{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        box-shadow: 0px 0px 10px rgba(33, 53, 100, 0.15);
+        border-radius: 50%;
+        height: 50px;
+        @include media(992){
+            top: 0;
+            bottom: auto;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+        }
+        img{
+            @include media(992){
+                width: 100%;
+            }
+        }
+    }
     &__body{
         display: flex;
         justify-content: space-between;
