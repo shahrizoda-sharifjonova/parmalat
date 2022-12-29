@@ -539,6 +539,7 @@
   line-height: 16px;
   color: #213564;
   display: block;
+  margin-bottom: 4px;
 }
 
 .footer__a:nth-of-type(3) {
@@ -552,6 +553,7 @@
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #333333;
+  display: block;
 }
 
 .footer__li {
@@ -1504,6 +1506,10 @@
   text-transform: uppercase;
   color: #213564;
   margin-right: 15px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: nowrap;
 }
 
 .how__figure {
@@ -1535,6 +1541,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #213564;
+  white-space: nowrap;
 }
 
 .how__content {
@@ -2106,6 +2113,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 40px;
+}
+
+.addition__top.disable-lg .addition__title {
+  display: block;
 }
 
 .addition__title {
@@ -3315,6 +3326,10 @@ ul {
 
   .footer__col-wrapper.list__mb .footer__li.mb {
     margin-right: 20px;
+  }
+
+  .footer__p {
+    margin-bottom: 0;
   }
 
   .footer__li.mb {

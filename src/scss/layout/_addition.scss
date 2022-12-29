@@ -66,6 +66,9 @@
             @include media(992){
                 display: none;
             }
+            .addition__title{
+                display: block;
+            }
         }
     }
     &__title{

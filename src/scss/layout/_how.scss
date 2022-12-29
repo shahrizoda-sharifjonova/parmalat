@@ -58,6 +58,8 @@
         text-transform: uppercase;
         color: #213564;
         margin-right: 15px;
+        width: max-content;
+        white-space: nowrap;
         @include media(992){
             font-size: 46px;
         }
@@ -112,6 +114,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             color: #213564;  
+            white-space: nowrap;
             @include media(768){
                 margin-left: 0;
                 margin-top: 10px;
