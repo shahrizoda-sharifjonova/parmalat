@@ -183,9 +183,9 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: 70px;
 }
 
@@ -440,7 +440,7 @@
   bottom: 0;
   width: 100%;
   height: 0;
-  background: #213564;
+  background: #FFCE0A;
   border-radius: 50% 50% 0 0;
   z-index: -1;
   -webkit-transition: 300ms ease;
@@ -449,7 +449,7 @@
 }
 
 .header__btn:hover {
-  color: #FFFFFF;
+  color: #213564;
   border: 2px solid transparent;
 }
 
@@ -517,6 +517,10 @@
 
 .footer__col-wrapper.list__mb {
   margin-bottom: 27px;
+}
+
+.footer__col-wrapper.list__mb ~ .footer__col-wrapper .footer__li:not(:last-of-type) {
+  margin-right: 20px;
 }
 
 .footer__p {
@@ -644,6 +648,10 @@
       -ms-flex-align: stretch;
           align-items: stretch;
   margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer__input {
@@ -655,6 +663,8 @@
   font-size: 15px;
   line-height: 23px;
   color: #333333;
+  width: 100%;
+  margin-right: 8px;
 }
 
 .footer__input::-webkit-input-placeholder {
@@ -699,6 +709,7 @@
   text-align: center;
   color: #FFFFFF;
   width: 136px;
+  min-width: 136px;
   height: 44px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -719,8 +730,8 @@
 
 .footer__btn:hover {
   color: #213564;
-  background: transparent;
-  border: 2px solid #213564;
+  background: #FFCE0A;
+  border: 2px solid transparent;
 }
 
 .footer__btn:hover svg path {
@@ -955,31 +966,14 @@
   overflow: hidden;
 }
 
-.intro__btn::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 0;
-  border-radius: 50% 50% 0 0;
-  background: #213564;
-  -webkit-transition: 300ms ease;
-  -o-transition: 300ms ease;
-  transition: 300ms ease;
-  bottom: 0;
-  z-index: -1;
-}
-
-.intro__btn:hover::before {
-  height: 130%;
-}
-
 .intro__btn:first-of-type {
   margin-right: 20px;
 }
 
 .intro__btn:first-of-type:hover {
-  background: transparent;
+  background: #FFCE0A;
   color: #213564;
+  border: 2px solid transparent;
 }
 
 .intro__btn:first-of-type:hover::before {
@@ -993,7 +987,8 @@
 }
 
 .intro__btn:last-of-type:hover {
-  color: #fff;
+  color: #213564;
+  background: #FFCE0A;
   border: 2px solid transparent;
 }
 
@@ -1082,6 +1077,10 @@
 .about__content-left {
   margin-right: 20px;
   margin-left: -30px;
+}
+
+.about__right {
+  padding-top: 58px;
 }
 
 .about__title {
@@ -1220,7 +1219,7 @@
 }
 
 .about__li.lg p {
-  text-align: left;
+  text-align: right;
   margin-top: 3px;
 }
 
@@ -1406,12 +1405,8 @@
   text-align: left;
 }
 
-.asks .accordion__button.first .accordion__arrow,
 .asks .accordion__button.active .accordion__arrow {
   background: #009ACE20;
-}
-
-.asks .accordion__button.active .accordion__arrow {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -1447,7 +1442,7 @@
 
 .asks .accordion__p {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 120%;
   color: #333333;
 }
@@ -1571,6 +1566,7 @@
   font-size: 40px;
   line-height: 100%;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .how__item.active .how__desc {
@@ -1752,7 +1748,8 @@
 }
 
 .news__button:hover {
-  background: transparent;
+  background: #FFCE0A;
+  border: 2px solid transparent;
   color: #213564;
 }
 
@@ -1863,6 +1860,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-right: 20px;
 }
 
 .recipes__profile-img {
@@ -1924,9 +1922,9 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   max-width: 980px;
   width: 100%;
 }
@@ -1934,6 +1932,7 @@
 .recipes__left {
   max-width: 380px;
   width: 100%;
+  margin-right: 120px;
 }
 
 .recipes__list {
@@ -2106,17 +2105,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 25px;
-}
-
-.addition__top.disable-lg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.addition__top.enable-lg {
-  display: none;
+  margin-bottom: 40px;
 }
 
 .addition__title {
@@ -2125,6 +2114,7 @@
   line-height: 100%;
   text-transform: uppercase;
   color: #213564;
+  display: none;
 }
 
 .addition__title img {
@@ -2141,7 +2131,6 @@
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
-  margin-bottom: 40px;
 }
 
 .addition__buttons.enable-lg {
@@ -2209,6 +2198,13 @@
   max-width: 840px;
   width: 100%;
   isolation: isolate;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .addition__slider.disable-lg {
@@ -3105,6 +3101,10 @@ ul {
     margin-right: 0;
   }
 
+  .about__right {
+    padding-top: 0;
+  }
+
   .asks {
     padding-bottom: 60px;
   }
@@ -3155,6 +3155,7 @@ ul {
 
   .recipes__left {
     max-width: 330px;
+    margin-right: 60px;
   }
 
   .recipes__items {
@@ -3294,6 +3295,26 @@ ul {
 
   .footer__col-wrapper.list__mb {
     margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-right: 20px;
+  }
+
+  .footer__col-wrapper.list__mb ~ .footer__col-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+  .footer__col-wrapper.list__mb .footer__li.mb {
+    margin-right: 20px;
   }
 
   .footer__li.mb {
@@ -3344,6 +3365,9 @@ ul {
     margin-bottom: 20px;
     border-bottom: 1px solid #FFFFFF;
     max-width: 100%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 
   .footer__input {
@@ -3353,6 +3377,7 @@ ul {
   .footer__btn {
     width: 40px;
     height: 40px;
+    min-width: 40px;
   }
 
   .footer__btn.disable-lg {
@@ -3436,6 +3461,7 @@ ul {
     font-size: 22px;
     line-height: 110%;
     margin-bottom: 5px;
+    text-transform: none;
   }
 
   .how__item.active .how__desc {
@@ -3496,14 +3522,20 @@ ul {
             filter: blur(100px);
   }
 
-  .addition__top.disable-lg {
-    display: none;
+  .addition__top {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 
-  .addition__top.enable-lg {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .addition__top.enable-lg .addition__title {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .addition__top.disable-lg {
+    display: none;
   }
 
   .addition__buttons {
@@ -3520,7 +3552,7 @@ ul {
   }
 
   .addition__buttons.disable-lg {
-    display: none;
+    display: none !important;
   }
 
   .addition__button-prev {
@@ -3870,6 +3902,10 @@ ul {
             align-items: flex-start;
   }
 
+  .about__li.lg p {
+    text-align: left;
+  }
+
   .about__li p {
     font-size: 16px;
     line-height: 120%;
@@ -3883,6 +3919,10 @@ ul {
   .asks .accordion__button {
     font-size: 16px;
     line-height: 110%;
+  }
+
+  .asks .accordion__p {
+    font-size: 16px;
   }
 
   .how__link {
@@ -3992,6 +4032,7 @@ ul {
 
   .recipes__profile {
     margin-bottom: 30px;
+    margin-right: 0;
   }
 
   .recipes__img {
@@ -4007,6 +4048,7 @@ ul {
 
   .recipes__left {
     max-width: 100%;
+    margin-right: 0;
   }
 
   .recipes__list {
@@ -4317,6 +4359,30 @@ ul {
 
   .header__content {
     padding: 100px 20px 100px 30px;
+  }
+
+  .footer__col-wrapper.list__mb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__col-wrapper.list__mb ~ .footer__col-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__col-wrapper.list__mb ~ .footer__col-wrapper .footer__li:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .footer__col-wrapper.list__mb .footer__li.mb {
+    margin-right: 0;
+    margin-bottom: 16px;
   }
 
   .no-webp .intro {

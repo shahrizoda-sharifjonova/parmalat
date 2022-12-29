@@ -40,14 +40,9 @@
                 font-size: 16px;
                 line-height: 110%;
             }
-            &.first,
             &.active{
                 .accordion__arrow{
                     background: #009ACE20;
-                }
-            }
-            &.active{
-                .accordion__arrow{
                     transform: rotate(-45deg);
                 }
             }
@@ -71,9 +66,12 @@
         }
         &__p{
             font-weight: 500;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 120%;
             color: #333333;
+            @include media(768){
+                font-size: 16px;
+            }
         }
     }
     &__img{

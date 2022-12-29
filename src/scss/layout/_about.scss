@@ -110,6 +110,12 @@
             }
         }
     }
+    &__right{
+        padding-top: 58px;
+        @include media(1200){
+            padding-top: 0;
+        }
+    }
     &__title{
         font-weight: 700;
         font-size: 22px;
@@ -255,8 +261,11 @@
                 align-items: flex-start;
             }
             p{
-                text-align: left;
+                text-align: right;
                 margin-top: 3px;
+                @include media(768){
+                    text-align: left;
+                }
             }
         }
         p{

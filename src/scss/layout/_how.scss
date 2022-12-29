@@ -157,10 +157,12 @@
                 font-size: 40px;
                 line-height: 100%;
                 margin-bottom: 10px;
+                text-transform: uppercase;
                 @include media(992){
                     font-size: 22px;
                     line-height: 110%;
                     margin-bottom: 5px;
+                    text-transform: none;
                 }
             }
             .how__desc{

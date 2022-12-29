@@ -63,6 +63,39 @@
                 margin-bottom: 27px;
                 @include media(992){
                     margin-bottom: 0;
+                    display: flex;
+                    width: max-content;
+                    margin-right: 20px;
+                }
+                @include media(575){
+                    flex-direction: column;
+                }
+                & ~ .footer__col-wrapper{
+                    @include media(992){
+                        display: flex;
+                        width: max-content;
+                    }
+                    @include media(575){
+                        flex-direction: column;
+                    }
+                    .footer__li{
+                        &:not(:last-of-type){
+                            margin-right: 20px;
+                            @include media(575){
+                                margin-right: 0;
+                                margin-bottom: 16px;
+                            }
+                        }
+                    }
+                }
+                .footer__li.mb{
+                    @include media(992){
+                        margin-right: 20px;
+                    }
+                    @include media(575){
+                        margin-right: 0;
+                        margin-bottom: 16px;
+                    }
                 }
             }
         }
@@ -178,6 +211,7 @@
             margin-bottom: 20px;
             border-bottom: 1px solid #FFFFFF;
             max-width: 100%;
+            width: max-content;
         }
     }
     &__subtitle{
@@ -198,6 +232,8 @@
         display: flex;
         align-items: stretch;
         margin-bottom: 10px;
+        width: 100%;
+        justify-content: space-between;
     }
     &__input{
         background: none;
@@ -208,6 +244,8 @@
         font-size: 15px;
         line-height: 23px;
         color: #333333;
+        width: 100%;
+        margin-right: 8px;
         @include media(992){
             padding-right: 10px;
         }
@@ -225,6 +263,7 @@
         text-align: center;
         color: #FFFFFF;
         width: 136px;
+        min-width: 136px;
         height: 44px;
         display: flex;
         justify-content: center;
@@ -236,11 +275,12 @@
         @include media(992){
             width: 40px;
             height: 40px;
+            min-width: 40px;
         }
         &:hover{
             color: #213564;
-            background: transparent;
-            border: 2px solid #213564;
+            background: #FFCE0A;
+            border: 2px solid transparent;
             svg{
                 path{
                     stroke: #213564;

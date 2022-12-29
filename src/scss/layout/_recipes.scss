@@ -56,8 +56,10 @@
     &__profile{
         display: flex;
         align-items: flex-start;
+        margin-right: 20px;
         @include media(768){
             margin-bottom: 30px;
+            margin-right: 0;
         }
         &-img{
             margin-right: 18px;
@@ -128,7 +130,7 @@
     &__bottom{
         display: flex;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: flex-start;
         max-width: 980px;
         width: 100%;
         @include media(768){
@@ -138,11 +140,14 @@
     &__left{
         max-width: 380px;
         width: 100%;
+        margin-right: 120px;
         @include media(1200){
             max-width: 330px;
+            margin-right: 60px;
         }
         @include media(768){
             max-width: 100%;
+            margin-right: 0;
         }
     }
     &__list{
